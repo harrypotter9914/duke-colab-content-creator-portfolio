@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+:root {
+  --bg: #071a18;
+  --paper: rgba(10,46,42,.82);
+  --paper-strong: rgba(13,63,57,.95);
+  --ink: #f2fffb;
+  --muted: rgba(242,255,251,.73);
+  --line: rgba(165,243,214,.18);
+  --accent: #2dd4bf;
+  --accent-deep: #facc15;
+  --teal: #5eead4;
+  --gold: #fef08a;
+  --shadow-soft: 0 30px 86px rgba(0,0,0,.34);
+  --shadow-strong: 0 30px 86px rgba(0,0,0,.34);
+}
+
+body.project-page {
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 12% 0%, color-mix(in srgb, var(--accent) 26%, transparent), transparent 26rem),
+    radial-gradient(circle at 88% 12%, color-mix(in srgb, var(--teal) 22%, transparent), transparent 24rem),
+    linear-gradient(135deg, #071a18, #12312d);
+}
+
+body.project-page::before { background: color-mix(in srgb, var(--accent) 35%, transparent); }
+body.project-page::after { background: color-mix(in srgb, var(--teal) 24%, transparent); }
+
+header {
+  background: color-mix(in srgb, #071a18 82%, transparent);
+  border-bottom-color: var(--line);
+}
+
+.logo { color: var(--ink); }
+nav a {
+  color: var(--muted);
+  background: rgba(255,255,255,.07);
+  border-color: var(--line);
+}
+nav a:hover, nav a:focus-visible {
+  color: var(--ink);
+  background: rgba(255,255,255,.13);
+}
+
+.role-project-bridge {
+  padding: 1.6rem 0 .4rem;
+}
+.role-project-bridge .container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+  padding: clamp(1rem, 2.5vw, 1.35rem);
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--accent) 16%, transparent), transparent),
+    var(--paper);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(14px);
+}
+.role-project-kicker {
+  margin: 0 0 .35rem;
+  color: var(--accent);
+  font-size: .78rem;
+  font-weight: 850;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.role-project-bridge p { margin: 0; color: var(--muted); }
+.role-home-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 1rem;
+  border-radius: 999px;
+  color: #101828;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+  text-decoration: none;
+  font-weight: 850;
+  white-space: nowrap;
+}
+.role-athletics-detail .role-home-link { color: #001a57; }
+
+.project-hero-card, .case-card, footer .container, .project-footer .container {
+  color: var(--ink);
+  background: var(--paper);
+  border-color: var(--line);
+  box-shadow: var(--shadow-soft);
+}
+.project-hero-card::before, .case-card::before {
+  background: linear-gradient(90deg, var(--accent), var(--accent-deep), var(--teal));
+}
+.project-kicker, .case-label { color: var(--accent); }
+.project-summary, .case-card > p, #project-code p, .resource-copy p, .resource-intro, .resource-note, .detail-card p, .callout-card p, .bullet-list, footer p { color: var(--muted); }
+.project-tag { color: #101828; background: color-mix(in srgb, var(--accent) 82%, white); border-color: transparent; }
+.project-pill, #back-to-top button { color: #101828; background: linear-gradient(135deg, var(--accent), var(--accent-deep)); }
+.role-athletics-detail .project-pill, .role-athletics-detail #back-to-top button { color: #001a57; }
+.project-metric, .gallery-card, .resource-card, .detail-card, .callout-card, .portfolio-frame {
+  color: var(--ink);
+  background: var(--paper-strong);
+  border-color: var(--line);
+}
+.gallery-card figcaption, .portfolio-sheet figcaption { color: var(--muted); }
+.video-wrapper {
+  background:
+    radial-gradient(circle at 20% 20%, color-mix(in srgb, var(--accent) 24%, transparent), transparent 30%),
+    linear-gradient(135deg, color-mix(in srgb, #071a18 80%, black), color-mix(in srgb, #12312d 82%, black));
+  border: 1px solid var(--line);
+}
+.video-wrapper::before {
+  color: var(--ink);
+  background: rgba(255,255,255,.10);
+  border: 1px solid var(--line);
+}
+.resource-link, .btn, #project-code a:not(.resource-link) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 44px;
+  padding: 0 1rem;
+  border-radius: 999px;
+  color: #101828;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--teal), var(--accent-deep));
+  font-weight: 850;
+  box-shadow: 0 16px 28px rgba(0,0,0,.18);
+}
+.role-athletics-detail .resource-link, .role-athletics-detail .btn, .role-athletics-detail #project-code a:not(.resource-link) { color: #001a57; }
+
+.section .container > h2, section .container > h2 {
+  margin-bottom: 1rem;
+  color: var(--ink);
+}
+.section .container:not(header .container):not(footer .container), section .container:not(header .container):not(footer .container) {
+  border-radius: 28px;
+}
+#project-video .container, #project-images .container, #project-code .container {
+  padding: clamp(1.15rem, 3vw, 1.8rem);
+  border: 1px solid var(--line);
+  background: var(--paper);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(14px);
+}
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.image-gallery img, .project-image {
+  width: 100%;
+  border-radius: 20px;
+  background: var(--paper-strong);
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 38px rgba(0,0,0,.22);
+  cursor: zoom-in;
+}
+.document-frame { background: var(--paper-strong); }
+.close { background: var(--paper-strong); color: var(--ink); border: 1px solid var(--line); }
+.modal { background: rgba(0,0,0,.86); }
+
+@media (max-width: 760px) {
+  .role-project-bridge .container { grid-template-columns: 1fr; }
+  .role-home-link { width: 100%; }
+}
+
+
+/* Maker detail layout: editorial content board */
+.role-maker-detail .role-project-bridge .container { grid-template-columns: minmax(0,1fr) auto; border-radius: 18px; }
+.role-maker-detail .role-project-bridge .container::before { content: 'content brief'; position: absolute; right: 1rem; top: .7rem; color: rgba(255,255,255,.12); font-family: 'Bricolage Grotesque'; font-size: 2.1rem; font-weight: 900; letter-spacing: -.04em; }
+.role-maker-detail .project-hero { padding-top: 2.4rem; }
+.role-maker-detail .project-hero-card { grid-template-columns: minmax(0,.82fr) minmax(320px,1.18fr); border-radius: 18px; }
+.role-maker-detail .project-hero-card::before, .role-maker-detail .case-card::before { height: 0; }
+.role-maker-detail .project-metric-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.role-maker-detail .project-metric { border-radius: 18px; }
+.role-maker-detail section .container:not(header .container):not(footer .container) { max-width: 1240px; }
+.role-maker-detail .enhanced-gallery, .role-maker-detail .image-gallery { grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); }
+.role-maker-detail .gallery-card, .role-maker-detail .case-card, .role-maker-detail #project-images .container, .role-maker-detail #project-code .container, .role-maker-detail #project-video .container { border-radius: 18px; }
+.role-maker-detail .gallery-card figcaption { font-size: .9rem; }
+.role-maker-detail .resource-card { display: grid; grid-template-columns: minmax(0,1fr) auto; border-radius: 18px; }
+.role-maker-detail .detail-grid { grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); }
