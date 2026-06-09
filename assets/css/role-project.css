@@ -169,7 +169,9 @@ nav a:hover, nav a:focus-visible {
 
 /* Maker detail layout: editorial content board */
 .role-maker-detail .role-project-bridge .container { grid-template-columns: minmax(0,1fr) auto; border-radius: 18px; }
-.role-maker-detail .role-project-bridge .container::before { content: 'content brief'; position: absolute; right: 1rem; top: .7rem; color: rgba(255,255,255,.12); font-family: 'Bricolage Grotesque'; font-size: 2.1rem; font-weight: 900; letter-spacing: -.04em; }
+.role-maker-detail .role-project-bridge .container { position: relative; }
+.role-maker-detail .role-project-bridge .container::before { content: 'content brief'; position: absolute; right: 1.4rem; top: .45rem; z-index: 0; pointer-events: none; color: rgba(255,255,255,.055); font-family: 'Bricolage Grotesque'; font-size: 2.1rem; font-weight: 900; letter-spacing: -.04em; }
+.role-maker-detail .role-project-bridge .container > * { position: relative; z-index: 1; }
 .role-maker-detail .project-hero { padding-top: 2.4rem; }
 .role-maker-detail .project-hero-card { grid-template-columns: minmax(0,.82fr) minmax(320px,1.18fr); border-radius: 18px; }
 .role-maker-detail .project-hero-card::before, .role-maker-detail .case-card::before { height: 0; }

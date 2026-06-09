@@ -43,6 +43,12 @@ const projectMeta = {
         tags: ["Python", "Computer Vision", "Deep Learning"],
         layout: "gallery"
     },
+    "wristmind.html": {
+        category: "Maker AI Demo",
+        summary: "A watchOS AI prototype that can be turned into a clear demo, workshop story, and practical guide for small-screen multimodal interaction.",
+        tags: ["Demo Story", "AI Tools", "watchOS", "Workshop Fit"],
+        layout: "gallery"
+    },
     "software-project3.html": {
         category: "Software Project",
         summary: "An Android note-taking app focused on clarity, efficiency, and everyday task management with lightweight interaction.",
