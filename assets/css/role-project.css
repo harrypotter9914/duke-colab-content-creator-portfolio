@@ -255,6 +255,7 @@ nav a:hover, nav a:focus-visible {
 .role-maker-detail .project-hero-card { grid-template-columns: minmax(0,.82fr) minmax(320px,1.18fr); border-radius: 18px; }
 .role-maker-detail .project-hero-card::before, .role-maker-detail .case-card::before { height: 0; }
 .role-maker-detail .project-metric-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.role-maker-detail .convention-metric-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
 .role-maker-detail .project-metric { border-radius: 18px; }
 .role-maker-detail section .container:not(header .container):not(footer .container) { max-width: 1240px; }
 .role-maker-detail .enhanced-gallery, .role-maker-detail .image-gallery { grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); }
